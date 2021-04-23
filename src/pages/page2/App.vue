@@ -1,11 +1,11 @@
 <template>
-  <img alt="Vue logo" src="../../assets/logo.png">
-  <HelloWorld msg="小程序page2"/>
+  <img alt="Vue logo" src="src/assets/img/logo.png" />
+  <HelloWorld msg="小程序page2" />
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component'
-import HelloWorld from '../../components/HelloWorld.vue'
+import { Options, Vue } from "vue-class-component";
+import HelloWorld from "../../components/HelloWorld.vue";
 
 @Options({
   components: {

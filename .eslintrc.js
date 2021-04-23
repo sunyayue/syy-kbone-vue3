@@ -3,17 +3,27 @@ module.exports = {
   "env": {
     "node": true
   },
+  parser:  'vue-eslint-parser', //定义ESLint的解析器
   "extends": [
     "plugin:vue/vue3-essential",
-    "@vue/standard",
-    "@vue/typescript/recommended"
+    "eslint:recommended",
+    "@vue/typescript/recommended",
+    "@vue/prettier",
+    "@vue/prettier/@typescript-eslint"
   ],
-  "parserOptions": {
-    "ecmaVersion": 2020
+  parserOptions: {
+    parser: '@typescript-eslint/parser',   /* 解析ts语法 */
+    ecmaVersion: 2020,
+    sourceType: 'module'
   },
-  "rules": {},
+  "rules": {
+    'indent': [2, 2, {
+      'SwitchCase': 1
+    }],
+    "@typescript-eslint/no-explicit-any": ["off"]
+  },
   'globals': {
     'VUE_APP_MP': true,
-    'wx': true,
+    'wx': true
   }
 }

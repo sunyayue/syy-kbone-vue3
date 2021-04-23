@@ -1,11 +1,11 @@
 <template>
-  <img alt="Vue logo" src="../../assets/logo.png" @click="jump">
-  <HelloWorld msg="小程序page1"/>
+  <img alt="Vue logo" src="src/assets/img/logo.png" @click="jump" />
+  <HelloWorld msg="小程序page1" />
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component'
-import HelloWorld from '../../components/HelloWorld.vue'
+import { Options, Vue } from "vue-class-component";
+import HelloWorld from "../../components/HelloWorld.vue";
 
 @Options({
   components: {
@@ -13,24 +13,24 @@ import HelloWorld from '../../components/HelloWorld.vue'
   }
 })
 export default class App extends Vue {
-  created ():void {
-    console.log('gaga')
+  created(): void {
+    console.log("gaga");
   }
 
-  jump ():void{
+  jump(): void {
     const route = {
-      url: 'page2'
-    }
+      url: "page2"
+    };
     // console.log(process.env.NODE_ENV)
     // console.log(process.env.VUE_APP_MP)
     // console.log(VUE_APP_MP)
-    if (VUE_APP_MP === 'miniprogram') {
-      console.log(window.location.href)
-      console.log(route.url)
-      window.location.href = `${route.url}`
-      console.log(window.location.href)
+    if (VUE_APP_MP === "miniprogram") {
+      console.log(window.location.href);
+      console.log(route.url);
+      window.location.href = `${route.url}`;
+      console.log(window.location.href);
     } else {
-      window.location.href = `.${route.url}.html`
+      window.location.href = `.${route.url}.html`;
     }
   }
 }

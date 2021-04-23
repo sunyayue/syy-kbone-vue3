@@ -1,7 +1,10 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from "vue";
+import App from "./App.vue";
+import { changeRem } from "@/assets/js/init";
 
-// 需要将创建根组件实例的逻辑封装成方法
-console.log('page1')
-window.VUE_APP_MP = ''
-createApp(App).mount('#app')
+window.VUE_APP_MP = "";
+changeRem();
+window.onresize = () => {
+  changeRem();
+};
+createApp(App).mount("#app");
